@@ -11,37 +11,39 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildNavBar(context),
-      body: const Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-            child: Text(
-              'Bonjour OUMAR FALL',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      body: const SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              child: Text(
+                'Bonjour OUMAR FALL',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-            child: YourBalance(),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 20,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              child: YourBalance(),
             ),
-            child: YourPoint(),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-            child: MainTransactions(),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 20,
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
+              child: YourPoint(),
             ),
-            child: CarouselTakeAdvantage(title: "J'en Profite"),
-          ),
-        ],
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              child: MainTransactions(),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
+              child: CarouselTakeAdvantage(title: "J'en Profite"),
+            ),
+          ],
+        ),
       ),
     );
   }
