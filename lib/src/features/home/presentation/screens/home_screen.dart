@@ -45,6 +45,11 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.deepOrangeAccent,
+        onPressed: () {},
+        child: Image.asset('assets/images/ibou.png'),
+      ),
     );
   }
 }

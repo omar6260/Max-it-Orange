@@ -15,12 +15,12 @@ class CarouselTakeAdvantage extends StatefulWidget {
 class _CarouselTakeAdvantageState extends State<CarouselTakeAdvantage> {
   final List<TakwAdvantage> listItems = [
     TakwAdvantage(
-      image: 'img_woman_shopping.png',
+      image: 'img4.png',
       title: 'Recharger crédit',
       description: 'Achat crédit',
     ),
     TakwAdvantage(
-      image: 'img_good_humoured_woman.png',
+      image: 'img5.png',
       title: 'Abonnement wido',
       description: 'Abonnement wido',
     ),
@@ -39,7 +39,7 @@ class _CarouselTakeAdvantageState extends State<CarouselTakeAdvantage> {
         ),
         const Gap(9),
         SizedBox(
-          height: 180,
+          height: 150,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: listItems.length,
@@ -47,16 +47,45 @@ class _CarouselTakeAdvantageState extends State<CarouselTakeAdvantage> {
               return Container(
                 clipBehavior: Clip.hardEdge,
                 margin: EdgeInsets.only(left: index == 0 ? 0 : 12),
-                width: 200,
+                width: 190,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
-                    color: Colors.amber),
+                    border: Border.all(color: Colors.grey)),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
+                    Image.asset(
+                      'assets/images/${listItems[index].image}',
+                      height: 90,
                       width: double.infinity,
-                      height: 114,
-                      color: Colors.black,
+                      fit: BoxFit.fill,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 14, top: 10),
+                      child: Text(
+                        listItems[index].title,
+                        style: TextStyle(
+                            color: AppColor.black17,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 14, top: 2),
+                      child: Row(
+                        children: [
+                          Text(
+                            listItems[index].description,
+                            style: const TextStyle(
+                                color: Colors.deepOrange, fontSize: 12),
+                          ),
+                          const Spacer(),
+                          const Icon(
+                            Icons.arrow_right,
+                            color: Colors.deepOrange,
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
