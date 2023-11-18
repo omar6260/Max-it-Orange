@@ -89,11 +89,6 @@ class _HomePageState extends State<HomePage> {
               label: 'Scanner',
             ),
           ]),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.deepOrangeAccent,
-        onPressed: () {},
-        child: Image.asset('assets/images/ibou.png'),
-      ),
     );
   }
 }

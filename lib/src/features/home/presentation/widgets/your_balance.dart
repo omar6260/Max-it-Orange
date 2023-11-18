@@ -57,7 +57,7 @@ class _YourBalanceState extends State<YourBalance> {
                           ),
                           Gap(5),
                           Icon(
-                            Icons.remove_red_eye,
+                            Icons.arrow_right,
                             color: Colors.deepOrangeAccent,
                           )
                         ],
@@ -73,38 +73,86 @@ class _YourBalanceState extends State<YourBalance> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    Text(
-                      'data',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    Gap(75),
-                    Icon(
-                      Icons.remove_red_eye,
-                      color: Colors.deepOrangeAccent,
-                    ),
-                    Gap(10),
-                    Icon(
-                      Icons.arrow_downward_outlined,
-                      color: Colors.deepOrangeAccent,
-                    ),
-                  ],
-                ),
-                // Gap(4),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Principal',
-                      style: TextStyle(color: Colors.white, fontSize: 10),
-                    ),
-                    Gap(4),
-                    Text(
-                      '- - -',
-                      style: TextStyle(color: Colors.white, fontSize: 10),
-                    )
-                  ],
+                Padding(
+                  padding: EdgeInsets.only(left: 11),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Text(
+                                'data',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              Gap(75),
+                              Icon(
+                                Icons.remove_red_eye,
+                                color: Colors.deepOrangeAccent,
+                              ),
+                              Gap(5),
+                              Icon(
+                                Icons.arrow_downward_outlined,
+                                color: Colors.deepOrangeAccent,
+                              )
+                            ],
+                          ),
+                          Text(
+                            'Principal',
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          ),
+                          Gap(4),
+                          Text(
+                            '- - -',
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          ),
+                        ],
+                      ),
+                      Gap(15),
+                      Padding(
+                        padding: EdgeInsets.only(right: 11),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Text(
+                                  'data',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                Gap(75),
+                                Icon(
+                                  Icons.remove_red_eye,
+                                  color: Colors.deepOrangeAccent,
+                                ),
+                                Gap(10),
+                                Icon(
+                                  Icons.arrow_downward_outlined,
+                                  color: Colors.deepOrangeAccent,
+                                )
+                              ],
+                            ),
+                            Text(
+                              'Crédit recharge',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 10),
+                            ),
+                            Gap(4),
+                            Text(
+                              '1 CFA',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
@@ -114,4 +162,3 @@ class _YourBalanceState extends State<YourBalance> {
     );
   }
 }
-
